@@ -1,3 +1,8 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
 .left {
     float: left;
 }
@@ -12,21 +17,6 @@
     margin: auto;
 }
 
-figure,
-ul,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a,
-span,
-input[type] {
-    margin: 0;
-    font-family: sans-serif;
-}
 
 .header-section {
     padding: 20px 0;
@@ -239,25 +229,19 @@ input[type=date] {
     margin: 8px 0;
     box-sizing: border-box;
 }
-input[type=submit]{
+.default-btn {
     background-color: #4272d8;
     border: none;
     color: white;
     font-size: 20px;
-    padding: 16px 32px;
+    padding: 16px 40px;
     text-decoration: none;
     cursor: pointer;
-    /* transition: .5s; */
     position: relative;
-    z-index: 1;
+    z-index: 999;
 }
-  /* input[type=submit]:hover{
-      background-color: #0002fb;
-  } */
-  .submitsss{
-      position: relative;
-  }
-.submitsss::before{
+  
+.default-btn::before{
     content: "";
     position: absolute;
     left: 50%;
@@ -269,7 +253,7 @@ input[type=submit]{
     transition: .5s;
 }
 
-.submitsss::after{
+.default-btn::after{
     content: "";
     position: absolute;
     right: 50%;
@@ -280,10 +264,10 @@ input[type=submit]{
     z-index: -1;
     transition: .5s;
 }
-.submitsss:hover::before{
+.default-btn:hover::before{
     width: 50%;
 }
-.submitsss:hover::after{
+.default-btn:hover::after{
     width: 50%;
 }
 footer{
